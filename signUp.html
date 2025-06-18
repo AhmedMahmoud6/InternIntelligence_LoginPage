@@ -34,7 +34,7 @@
           <div class="password-container flex flex-col mt-4">
             <label for="password" class="text-[#f3f0f8] mb-2">Password</label>
             <input
-              type="text"
+              type="password"
               id="password"
               class="p-3 bg-white/20 outline-1 outline-white/50 text-white placeholder:text-gray-300 rounded-xl transition-all duration-300 transform focus:-translate-y-1 focus:bg-white/25 focus:shadow-md"
               placeholder="Enter your password"
@@ -54,10 +54,14 @@
         </div>
 
         <button
-          class="w-full p-3 bg-white/30 rounded-lg shadow-md outline-1 outline-white/60 font-bold text-white mt-8 transition-all duration-300 cursor-pointer transform hover:-translate-y-1 hover:bg-white/35"
+          class="sign-up w-full p-3 bg-white/30 rounded-lg shadow-md outline-1 outline-white/60 font-bold text-white mt-8 transition-all duration-300 cursor-pointer transform hover:-translate-y-1 hover:bg-white/35"
         >
           Register
         </button>
+
+        <p class="notify text-red-300 font-bold text-center mt-4 hidden">
+          Account created
+        </p>
 
         <p class="text-center text-[#f3f0f8] mt-6 text-sm md:text-base">
           Already have an account?
@@ -66,4 +70,6 @@
       </div>
     </div>
   </body>
+  <script type="module" src="register.js"></script>
+  <script type="module" src="functions.js"></script>
 </html>
