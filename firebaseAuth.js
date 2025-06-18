@@ -29,7 +29,6 @@ export async function registerUser(email, password) {
       email,
       password
     );
-    console.log("User registered:", userCredential.user);
   } catch (error) {
     console.error("Registration error:", error.message);
   }
@@ -42,9 +41,9 @@ export async function loginUser(email, password) {
       email,
       password
     );
-    console.log("User logged in:", userCredential.user.email);
+    return { success: true };
   } catch (error) {
-    console.error("Login error:", error.message);
+    return { error: error.code, success: false };
   }
 }
 

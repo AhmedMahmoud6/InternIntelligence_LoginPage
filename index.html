@@ -17,59 +17,74 @@
       <div
         class="card bg-white/10 outline-1 outline-white/30 p-10 sm:p-10 p-10 px-6 rounded-xl w-full sm:w-100"
       >
-        <div class="titles text-center mb-4">
-          <h1 class="text-white text-3xl font-bold mb-2">Welcome Back</h1>
-          <p class="text-gray-200 text-md">Please sign in to your account</p>
-        </div>
-        <div class="input-fields">
-          <div class="email-container flex flex-col">
-            <label for="email" class="text-[#f3f0f8] mb-2">Email</label>
-            <input
-              type="text"
-              id="email"
-              class="p-3 bg-white/20 outline-1 outline-white/50 text-white placeholder:text-gray-300 rounded-xl transition-all duration-300 transform focus:-translate-y-1 focus:bg-white/25 focus:shadow-md"
-              placeholder="Enter your email address"
-            />
+        <div class="login-details transition-all duration-300">
+          <div class="titles text-center mb-4">
+            <h1 class="text-white text-3xl font-bold mb-2">Welcome Back</h1>
+            <p class="text-gray-200 text-md">Please sign in to your account</p>
           </div>
-          <div class="password-container flex flex-col mt-4">
-            <label for="password" class="text-[#f3f0f8] mb-2">Password</label>
-            <input
-              type="text"
-              id="password"
-              class="p-3 bg-white/20 outline-1 outline-white/50 text-white placeholder:text-gray-300 rounded-xl transition-all duration-300 transform focus:-translate-y-1 focus:bg-white/25 focus:shadow-md"
-              placeholder="Enter your password"
-            />
+          <div class="input-fields">
+            <div class="email-container flex flex-col">
+              <label for="email" class="text-[#f3f0f8] mb-2">Email</label>
+              <input
+                type="text"
+                id="email"
+                class="p-3 bg-white/20 outline-1 outline-white/50 text-white placeholder:text-gray-300 rounded-xl transition-all duration-300 transform focus:-translate-y-1 focus:bg-white/25 focus:shadow-md"
+                placeholder="Enter your email address"
+              />
+            </div>
+            <div class="password-container flex flex-col mt-4">
+              <label for="password" class="text-[#f3f0f8] mb-2">Password</label>
+              <input
+                type="password"
+                id="password"
+                class="p-3 bg-white/20 outline-1 outline-white/50 text-white placeholder:text-gray-300 rounded-xl transition-all duration-300 transform focus:-translate-y-1 focus:bg-white/25 focus:shadow-md"
+                placeholder="Enter your password"
+              />
+            </div>
           </div>
-        </div>
-        <div class="remember-forget flex justify-between mt-4">
-          <div class="remember flex items-center gap-2">
-            <input id="me" class="w-4 h-4" type="checkbox" />
-            <label for="me" class="text-sm text-[#f3f0f8] cursor-pointer"
-              >Remember me</label
+          <div class="remember-forget flex justify-between mt-4">
+            <div class="remember flex items-center gap-2">
+              <input id="me" class="w-4 h-4" type="checkbox" />
+              <label for="me" class="text-sm text-[#f3f0f8] cursor-pointer"
+                >Remember me</label
+              >
+            </div>
+            <p class="text-[#f3f0f8] text-sm cursor-pointer hover:underline">
+              Forgot Password?
+            </p>
+          </div>
+
+          <button
+            class="sign-in w-full p-3 bg-white/30 rounded-lg shadow-md outline-1 outline-white/60 font-bold text-white mt-8 transition-all duration-300 cursor-pointer transform hover:-translate-y-1 hover:bg-white/35"
+          >
+            Sign In
+          </button>
+
+          <p class="notify text-green-300 font-bold text-center mt-4 hidden">
+            Logged in successfully
+          </p>
+
+          <p class="text-center text-[#f3f0f8] mt-6 text-sm md:text-base">
+            Don't have an account?
+            <a href="signUp.html" class="font-bold cursor-pointer"
+              >Sign up here</a
             >
-          </div>
-          <p class="text-[#f3f0f8] text-sm cursor-pointer hover:underline">
-            Forgot Password?
           </p>
         </div>
 
-        <button
-          class="sign-in w-full p-3 bg-white/30 rounded-lg shadow-md outline-1 outline-white/60 font-bold text-white mt-8 transition-all duration-300 cursor-pointer transform hover:-translate-y-1 hover:bg-white/35"
-        >
-          Sign In
-        </button>
-
-        <p class="notify text-green-300 font-bold text-center mt-4 hidden">
-          Logged in successfully
-        </p>
-
-        <p class="text-center text-[#f3f0f8] mt-6 text-sm md:text-base">
-          Don't have an account?
-          <a href="signUp.html" class="font-bold cursor-pointer"
-            >Sign up here</a
+        <div class="login-success hidden">
+          <h1 class="text-white text-2xl text-center mb-4">
+            You're currently logged in
+          </h1>
+          <button
+            class="logout bg-red-300/70 w-full p-3 rounded-lg text-white cursor-pointer hover:bg-red-400/80 transition-all duration-300"
           >
-        </p>
+            Log Out
+          </button>
+        </div>
       </div>
     </div>
+
+    <script type="module" src="login.js"></script>
   </body>
 </html>
